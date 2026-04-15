@@ -109,6 +109,30 @@ while main_loop:
 
     elif ball_center > paddle_center:
        y_direction = 1
+ 
+  if x_direction <=1:
+   if (ball_position_y==first_position_y and y_direction==0):
+      continue
+   elif (first_position_y < ball_position_y and y_direction==1):
+      if(first_position_y-user_speed>=0):
+         first_position_y-=user_speed
+   elif (first_position_y > ball_position_y and y_direction==1):
+      if(first_position_y+user_speed<HEIGHT):
+         first_position_y+=user_speed
+   elif (first_position_y < ball_position_y and y_direction==-1):
+      if(first_position_y-user_speed>=0):
+         first_position_y-=user_speed
+   elif (first_position_y > ball_position_y and y_direction==-1):
+      if(first_position_y+user_speed<HEIGHT):
+         first_position_y+=user_speed
+
+
+
+  if x_direction >=1:
+     pass
+
+
+
 
   
 
